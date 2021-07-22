@@ -8,8 +8,16 @@ $(function () {
   $("[id=enviarCorreo]").click(function(){
   alert("El correo fue enviado correctamente");
 });
-  $(".alternar-tarjeta").on("click",function(e){
-  $(this).next().toggle();
-  e.preventDefault();
+  $("#card01").on("click",function(e){
+  $(".alternar01").toggle();
+    e.preventDefault();
+})
+  $("#card02").on("click",function(e){
+  $(".alternar02").toggle();
+    e.preventDefault();
+})
+  $("#card03").on("click",function(e){
+  $(".alternar03").toggle();
+    e.preventDefault();
 })
 })

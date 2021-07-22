@@ -1,20 +1,23 @@
 <!doctype html>
 <html lang="es">
   <head>
-    <!-- Required meta tags -->
+    <!-- meta tags para codificación caracteres (utf-8) y viewport (uso de diferentes tamaños de pantallas)-->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CDN -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Google fonts CDN -->
     <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;700&family=Lobster&display=swap" rel="stylesheet">
+    <!-- CSS propio -->
     <link rel="stylesheet" href="./assets/css/style.css">
-
+    <!-- titulo de la pagina en meta tags -->
     <title>Ricomida</title>
   </head>
   <body class="container-fluid">
+<!-- Inicio Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       <a class="navbar-light ricotitu" href="#inicio">Ricomida</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -37,7 +40,7 @@
         </ul>
       </div>
     </nav>
-
+<!-- Fin Navbar -->
     <div class="container mt-4">
       <div class="row">
         <div class="col-sm">
@@ -46,13 +49,15 @@
         <div class="col-sm text-uppercase"><h1 class="bordesub">
           pizza al estilo chicago con espinacas y champiñones</h1>
           <h3>110 min / 6 a 8 porciones</h3>
+<!-- Botones con tooltips y alerta de correo enviado en primer botón -->
           <button id="enviarCorreo" type="button" class="btn btn-outline-light text-muted data-toggle="tooltip" data-placement="bottom" title="Presiona para enviar a tu correo">Enviar por Correo</button>
           <button type="button" class="btn btn-outline-light text-muted data-toggle="tooltip" data-placement="right" title="Agrega esta receta a tus favoritos">Añadir a favoritos</button> 
         </div>
       </div>
     </div>
-    <!--Carousel-->
+<!--Inicio Carousel-->
   <div class="row">
+<!-- clase requerida de bootstrap para que desaparesca carousel en pantalla pequeña -->
     <div class="d-none d-sm-none col-md-12 col-lg-12 col-xl-12 d-md-block d-lg-block d-xl-block">
     <div id="blogCarousel" class="carousel slide mt-3" data-ride="carousel">
       <ol class="carousel-indicators">
@@ -109,11 +114,12 @@
     </div>
     </div>
   </div>
-    <!-- fin carousel-->
+<!-- fin carousel-->
     <main class="container mt-5 bordesub">
       <article class="section_ingre_prepa">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6 seccion_ingredientes">
+<!-- Titulo h4 seleccionado por elemento en script js para cambiar a rojo con doble click -->
             <h4 class="pt-4"><u>INGREDIENTES</u></h4>
             <p class="py-4">Masa</p>
             <ul class="pl-0">
@@ -143,6 +149,7 @@
             </ul>
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-6 col-xl-6">
+<!-- Titulo h4 seleccionado por elemento en script js para cambiar a rojo con doble click -->
             <h4 class="py-4"><u>PREPARACIÓN</u></h4>
             <p class="pt-2">1. Para la masa, disolver la levadura y el azúcar en agua tibia en un bol grande. Dejar reposar 2 minutos. Agregar el aceite, la harina de maíz, sal y 400gr de harina. Mezclar bien. Amasar y agregar el resto de harina, la cantidad necesaria para tener una masa blanda. Poner en el mesón y amasar por 5 minutos o hasta tener una masa lisa y elástica (agregar harina en el mesón a medida que se va amasando para que la masa no se pegue) . Poner la masa en un bol aceitado, tapar con un paño de cocina limpio y dejar reposar hasta que la masa duplique su volumen (leudar). Golpear la masa para que baje y luego dejar leudar por 40 minutos adicionales.</p>
             <p class="pt-2">2. Mientras tanto preparar la salsa: Calentar 4 cucharadas de aceite en una olla a fuego medio. Agregar la cebolla, Orégano Gourmet, Albahaca Gourmet, sal y cocinar hasta que la cebolla esté dorada. Agregar el ajo y cocinar por 30 segundos. Agregar los tomates junto al jugo del tarro, a la mezcla de cebolla. Agregar el azúcar y cocinar hasta que la mezcla se haya reducido y espesado, como 30 minutos. Sazonar con sal y pimienta a gusto. Reservar.</p>
@@ -154,10 +161,10 @@
         </div>
       </article>
     </main>
-
-    <h1 class="text-center text-uppercase mb-5">recetas relacionadas</h1>
-    <div class="row container mb-5 tricards">
-      <div class="col-4 alternar-tarjeta">
+<!-- tarjetas recetas relacionadas que desaparecen y aparecen con click (toggle) dandole enfasis en la receta a la que se hace click-->
+    <h2 class="text-center text-uppercase mb-5 recetarel">recetas relacionadas</h2>
+    <div class="row container-fluid d-flex justify-content-center flex-md-row flex-column mb-5">
+      <div class="col alternar02 alternar03" id="card01">
         <div class="card" style="width: 18rem;">
           <img src="assets/img/recipe-card-1.png" class="card-img-top" alt="Imagen panqueques">
           <div class="card-body pb-0">
@@ -166,7 +173,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4  alternar-tarjeta">
+      <div class="col alternar01 alternar03" id="card02">
         <div class="card" style="width: 18rem;">
           <img src="assets/img/recipe-card-2.png" class="card-img-top" alt="Imagen panqueques">
           <div class="card-body pb-0">
@@ -175,7 +182,7 @@
           </div>
         </div>
       </div>
-      <div class="col-4  alternar-tarjeta">
+      <div class="col alternar01 alternar02" id="card03">
         <div class="card" style="width: 18rem;">
           <img src="assets/img/recipe-card-3.png" class="card-img-top" alt="Imagen panqueques">
           <div class="card-body pb-0">
@@ -185,24 +192,20 @@
         </div>
       </div>
     </div>
-
+<!-- seccion contactos/subscripción -->
     <section>
-      <h1 class="newsl1">SUSCRÍBETE EN NUESTRO NEWSLETTER</h1>
+      <h2 class="newsl1 recetarel">SUSCRÍBETE EN NUESTRO NEWSLETTER</h2>
       <div class="nanana">
       <h2 class="newsl1 ninini">y obtén las mejores recetas que tenemos en</h2>
       <h2 class="newsl2 ninini">Ricomida</h2></div>
       <button type="button" class="btn btn-outline-light butnan">Empezar</button>
-        
     </section>
     <footer class="py-4"><h2>Ricomida</h2></footer>
-
     <!-- Separate Popper and Bootstrap JS -->
-
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
-
+    <!-- script propio con instrucciones jquery -->
     <script src="assets/js/script.js"></script>
-
   </body>
 </html>

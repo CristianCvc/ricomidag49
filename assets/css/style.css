@@ -32,10 +32,6 @@ footer{
   margin-bottom: 2rem;
 }
 
-.tricards{
-  margin-left: 8rem;
-}
-
 .newsl1{
   font-family: 'Cabin', sans-serif;
   color: #ffffff;
@@ -64,4 +60,8 @@ footer{
   margin-bottom: 10%;
   padding-left: 2rem;
   padding-right: 2rem;
-}   
+}
+
+.recetarel{
+  text-size-adjust: 50px;
+}
